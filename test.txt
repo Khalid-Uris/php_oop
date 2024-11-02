@@ -1,0 +1,24 @@
+for specific user stats in user profile.
+team assign mail template. complete.
+exactas is pending. complete.
+
+
+Q Add the contest to admin site. 
+Q we cannot show world chanpionship and head to head prediction untill final score
+is come.
+Q weekly contest calculate weekwize. 
+Q we can fetch all nfl data or store them in database.
+Q user win by in head to head if the team is win or winning statistics.
+Q kindly user table and userteamassign table is selected by and transection table
+remove fake data and keep in real data.
+Q search usama data which is premium.
+Q create video of prediction.
+Q world championship prediction is not show after assign team then it was show.
+
+ $contest = Contest::where('week_number', $data['week']['number'])->where('season', $data['season']['type'])->latest()->first();
+
+Correct these things 
+1. Admin site head to head win.
+2. If user can register then contest or team select is neccessory.
+3. In register time mail take more time or response. Apply here queue or other tachnic.
+4. winner show dynamically.
