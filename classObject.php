@@ -1,4 +1,5 @@
 <?php
+
 class BankAccount
 {
     public $accountNumber;
@@ -9,11 +10,12 @@ class BankAccount
         if ($amount > 0) {
             $this->balance += $amount;
         }
-        return $this->balance;
+        return $this;
     }
 
     public function withdraw($amount)
     {
+
         if ($amount <= $this->balance) {
             $this->balance -= $amount;
             return true;
@@ -27,8 +29,7 @@ $account = new BankAccount();
 $account->accountNumber = 1;
 $account->balance = 100;
 
-// $amountDeposit=$account->deposit(100);
-// echo $amountDeposit;
+$account->deposit(100)->withdraw(150);
 
-$deducted = $account->withdraw(50);
-echo $deducted;
+// echo $depositAmount;
+echo "The bank account $account->accountNumber has a balance of $$account->balance";

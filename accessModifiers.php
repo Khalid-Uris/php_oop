@@ -1,35 +1,29 @@
 <?php
 
-class CustomerModifier
+class Customer
 {
-
-    //public $name;
     private $name;
 
     public function setName($name)
     {
         $name = trim($name);
-        // return !empty($name);
 
         if ($name == '') {
             return false;
         }
 
-
         $this->name = $name;
+
         return true;
     }
 
     public function getName()
     {
-        return ucfirst($this->name);
+        return $this->name;
     }
 }
 
-$customer = new CustomerModifier();
-// $customer->name = 'bob';
+$customer = new Customer();
 
-// echo $customer->getName();
-
-$customer->setName('bob');
+$customer->setName('Bob');
 echo $customer->getName();

@@ -1,9 +1,11 @@
 <?php
 
-class FileDestructor
+class File
 {
     private $handle;
+
     private $filename;
+
 
     public function __construct($filename, $mode = 'r')
     {
@@ -22,11 +24,9 @@ class FileDestructor
     {
         return fread($this->handle, filesize($this->filename));
     }
-    public function getFileName()
-    {
-        return $this->filename;
-    }
 }
 
-$f = new FileDestructor('./test.txt');
+
+$f = new File('./test.txt');
+
 echo $f->read();
