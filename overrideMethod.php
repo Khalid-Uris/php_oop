@@ -19,7 +19,7 @@ class Android extends Robot
 
 $robot = new Robot();
 
-// echo $robot->greet(); // Hello
+echo $robot->greet(); // Hello
 echo "<br>";
 $android = new Android();
 echo $android->greet(); // Hi
